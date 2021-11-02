@@ -1,0 +1,118 @@
+<div class="background"></div>
+
+<div class="header-cut-1"></div>
+<div class="header-logo">
+  <img src="assets/img/logo-transparent-blue.png"/>
+  <h1>Chain Of Dots</h1>
+</div>
+<div class="header-cut-2"></div>
+
+
+<div class="gap"></div>
+
+<div class="header">
+  <img src="assets/img/logo-transparent-white.png" alt="">
+  <div class="menu">
+    <span (click)="scrollToContact(contact, input)">Kontakt</span>
+  </div>
+</div>
+
+<div class="section section-white">
+  <h1>KO SMO MI?</h1>
+
+  <div class="text">
+    <p>Mi smo IT startap firma iz Novog Sada.</p>
+    <p>Pored ideja kojima smo trenutno okupirani i na čijim razvojima radimo aktivno, uvek smo otvoreni i za outsource tržište.</p>
+    <p>Iza sebe već imamo par takvih projekata gde smo sarađivali uglavnom sa domaćim klijentima, međutim neki od projekata su na kraju završili i na inostranom tržištu.</p>
+    <p>Za bilo kakve dodatne informacije možete nas kontaktirati putem kontakt forme.</p>
+  </div>
+</div>
+
+<div class="section section-orange">
+  <h1>CORE TIM</h1>
+
+  <div class="text">
+    <p>Naš osnovni tim se sastoji od tri mlada i ambiciozna momka, koji uprkos godinama imaju višegodišnji staž u industriji.</p>
+    <p>Ono što je deo našeg svakodnevnog života, i što je ujedno i motiv oko koga se ova priča zavrtela je zapravo neprestana edukacija i usavršavanje u različitim sferama kako bi uvek išli ka unapređenju i širenju svojih trenutnih sposobnosti.</p>
+  </div>
+
+  <div class="cards">
+  
+    <div class="card">
+      <div class="img">
+        <img src="assets/img/avatar-a.jpg" alt="">
+      </div>
+      <h2>Aleksa Novković</h2>
+      <span>Co-Founder, CEO</span>
+      <span class="small">Software Engeneer</span>
+      <div class="card-text">
+        <p>Nakon završetka osnovnih studija, stekao zvanje diplomirani informatičar Prirodno-matematičkog fakulteta u Novam Sadu. Trenutno na master studijama informatike na istom fakultetu. Višestruko nagrađivan tokom školovanja i stipendista na programu Izuzetno nadareni studenti Republike Srbije.</p>
+        <p>Višegodišnje iskustvo u industriji kao Frontend, Devops i Blokčejn developer. Aktivan na par evropskih projekata.</p>
+        <p>Pored toga, okrenut naučnim istraživanjima na polju IT-a i čest posetilac konferencija u istoj oblasti.</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="img">
+        <img src="assets/img/avatar-j.jpg" alt="">
+      </div>
+      <h2>Jovan Glavonjić</h2>
+      <span>Co-Founder, CTO</span>
+      <span class="small">Software Engeneer</span>
+      <div class="card-text">
+        <p>Diplomirani informatičar - Prirodno-matematičkog fakulteta u Novom Sadu, trenutno student master studija informatike na istom fakultetu.</p>
+        <p>Nakon srednje škole, uporedo sa studiranjem, bavio se administriranjem računarskih mreža, iskusan u radu sa mrežnim servisima i protokolima kao što su DHCP, SSH, Telnet i drugi.</p>
+        <p>Poseduje ECDL sertifikat stečen nakon srednje škole, a koji se odnosi na web programiranje i računarske mreže.</p>
+        <p>Iskustvo u radu kao Bekend, Devops i Blokčejn developer na evorpskim projektima.</p>
+      </div>
+    </div>  
+    
+    <div class="card">
+      <div class="img">
+        <img src="assets/img/avatar-d.jpg" alt="">
+      </div>
+      <h2>Dušan Blažić</h2>
+      <span>Co-Founder, CFO</span>
+      <span class="small">Economist & Lawyer</span>
+      <div class="card-text">
+        <p>Diplomirani pravnik pravnog fakultet u Novom Sadu.</p>
+        <p>Višegodišnje  iskustvo u oblasti marketinga i trgovine. U poslednje vreme pravno znanje preusmerava na oblast IT-a.</p>
+        <p>Par godina aktivan kao savetnik i marketing stručnjak za nekoliko IT kompanija u usponu.</p>
+        <p>Veliku pažnju posvećuje naučnim časopisima iz oblasti inovacija u IT sektoru.</p>
+        <p>Uspešan pravnik, vešt u pisanju dokumentacije potrebne za rad sa klijentom.</p>
+      </div>    
+    </div> 
+  </div>
+</div>
+
+
+<div class="section section-white">
+  <h1>MAJSTORLOOK</h1>
+
+  <div class="majstorlook-logo">
+    <img src="assets/img/MajstorLook.png" alt="">
+    <span>MajstorLook</span>
+  </div>
+
+  <div class="text">
+    <p>Ideja koja je u poslednjih pola godine okupirala ovu mladu ekipu nosi ime 'MajstorLook"</p>
+    <p>Prvobitna zamisao cele priče oko ove ideje je nastala jos u ranim studentskim danima, kao rešenje koje bi moglo pomoći u ljudima ne samo u rešavanju svakodnevnih problema sa kojima se susreću već i u olakšavanju života u gradu. Naša misija je da spojimo ljude sa raznim sposobnostima i veštinama kao što su majstori svih profesija, ali i spremačice, baštovani i slično.</p>
+    <p>Koristeći "MajstorLook" rešenje, sa svega nekoliko klikova možete pronaći slobodnog majstora, kućnu pomoćnicu i slično, koji vam mogu pomoći. Takođe možete rezervisati majstora unapred, dogovoriti redovna održavanja, i još mnogo toga.</p>
+    <p><span class="link">VIŠE O MAJSTORLOOK-u</span></p>
+  </div>
+
+</div>
+
+<div class="footer section section-green">
+  <div class="form" #contact>
+    <span>Za više informacija o nama i svemu što želite da saznate budite slobodni da nas kontaktirate putem ove forme</span>
+    <div>
+      <input #input type="email" placeholder="Email" pInputText [(ngModel)]="email"> 
+      <textarea rows="5" placeholder="Tekst poruke..." pInputTextarea [(ngModel)]="message"></textarea> 
+
+      <button pButton pRipple type="button" label="Pošalji" class="p-button-warning"></button>  
+    </div>
+  </div>
+ 
+  <span>Copyright © 2021, ChainOfDots. All rights reserved.</span>
+</div>

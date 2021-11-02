@@ -1,0 +1,269 @@
+$bg-url: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAIAAACRXR/mAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAIGNIUk0AAHolAACAgwAA+f8AAIDpAAB1MAAA6mAAADqYAAAXb5JfxUYAAABnSURBVHja7M5RDYAwDEXRDgmvEocnlrQS2SwUFST9uEfBGWs9c97nbGtDcquqiKhOImLs/UpuzVzWEi1atGjRokWLFi1atGjRokWLFi1atGjRokWLFi1af7Ukz8xWp8z8AAAA//8DAJ4LoEAAlL1nAAAAAElFTkSuQmCC";
+$bg-width: 0px;
+$bg-height: -50px;
+
+@-webkit-keyframes bg-scrolling-reverse {
+  100% { background-position: $bg-width $bg-height; }
+}
+@-moz-keyframes    bg-scrolling-reverse {
+  100% { background-position: $bg-width $bg-height; }
+}
+@-o-keyframes      bg-scrolling-reverse {
+  100% { background-position: $bg-width $bg-height; }
+}
+@keyframes         bg-scrolling-reverse {
+  100% { background-position: $bg-width $bg-height; }
+}
+
+@-webkit-keyframes bg-scrolling {
+  0% { background-position: $bg-width $bg-height; }
+}
+@-moz-keyframes    bg-scrolling {
+  0% { background-position: $bg-width $bg-height; }
+}
+@-o-keyframes      bg-scrolling {
+  0% { background-position: $bg-width $bg-height; }
+}
+@keyframes         bg-scrolling {
+  0% { background-position: $bg-width $bg-height; }
+}
+
+.background {
+  width: 100%;
+  height: 100vh;
+  background: url($bg-url) repeat 0 0;
+  animation: bg-scrolling-reverse .92s infinite;
+  animation-timing-function: linear;
+}
+
+.header-logo {
+  z-index: 13;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  img {
+    height: 150px;
+  }
+
+  h1 {
+    text-align: center;
+    font-weight: 500;
+    font-size: 42px;
+    margin: 0;
+    color: #f58800;
+    font-family: MuseoModerno, "segoe ui", helvetica, arial, sans-serif;
+  }
+}
+
+.header-cut-1 {
+  z-index: 12;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: #266867;
+  clip-path: polygon(0 0, 100% 0%, 100% 0px, 0 150px);
+}
+.header-cut-2 {
+  z-index: 11;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: #266867;
+  clip-path: polygon(0 100%, 100% 100%, 100% calc(100% - 150px), 0 100%);
+}
+.gap {
+  width: 100%;
+  height: 100px;
+  background-color: #266867;
+}
+
+.header {
+  z-index: 100;
+  position: sticky;
+  top: -1px;
+  background-color: #266867;
+  padding: 0 20px;
+  font-size: 20px;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0px 12px 15px -12px rgba(0,0,0,0.75);
+  img {
+    height: 35px;
+  }
+  .menu {
+    display: flex;
+    span {
+      display: block;
+      margin-right: 20px;
+      text-transform: uppercase;
+      font-size: 18px;
+      font-weight: 300;
+      color: #fff;
+      cursor: pointer;
+      transition: all .2s ease;
+    }
+  }
+}
+
+.section {
+  width: 100%;
+  min-height: 100px;
+  &.section-white {
+    background-color: #fff;
+    color: #266867;
+    padding: 50px 0 0;
+  }
+  &.section-green {
+    padding: 50px 20px;
+    background-color: #266867;
+    color: #fff;
+  }
+  &.section-orange {
+    padding: 50px 20px;
+    background-color: #f58800;
+    color: #fff;
+  }
+
+  h1 {
+    text-align: center;
+    margin: 0;
+    font-weight: 600;
+    font-size: 42px;
+  }
+
+  .text {
+    margin: 50px 0;
+    padding: 0px 18px;
+    text-align: center;
+    p {
+      margin: 30px 0 0;
+      font-size: 20px;
+      &:first-child {
+         margin: 0;
+      }
+    }
+  }
+
+  .cards {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-top: 50px;
+
+    .card {
+      width: 450px;
+      background-color: #fff;
+      color: #000;
+      // border-radius: 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 220px 30px 30px;
+      margin-bottom: 100px;
+      position: relative;
+      box-shadow: 0px 2px 10px -1px rgba(0,0,0,1);
+
+      .img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 200px;
+        img {
+          width: 100%;
+          height: 200px;
+          object-fit: cover;
+        }
+      }
+
+      h2 {
+        margin: 20px 0 10px;
+      }
+
+      span {
+        display: block;
+        color: #888;
+        margin: 0 0 5px;
+        &.small {
+          font-style: italic;
+          font-size: 12px;
+        }
+      }
+
+      .card-text {
+        margin-top: 30px;
+        p {
+          text-align: justify;
+          font-size: 16px;
+          margin: 0 0 10px;
+        }
+      }
+    }
+  }
+}
+
+.majstorlook-logo {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 40px 0;
+  img {
+    height: 130px;
+  }
+  span {
+    font-size: 42px;
+    color: #013d59;
+  }
+}
+
+.footer {
+  margin-top: 100px;
+  padding: 50px 0;
+  min-height: 200px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  .form > div {
+    margin: 30px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+
+    input {
+      margin-bottom: 10px;
+    }
+
+    textarea {
+      resize: none;
+      margin-bottom: 10px;
+    }
+  }
+  & > span {
+    margin: 30px 0 10px;
+    font-size: 14px;
+  }
+}
+
+
+.link {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+::ng-deep .p-button-warning {
+ background-color: #f58800 !important;
+ border: 1px solid #f58800 !important;
+ color: #fff !important;
+}
